@@ -1,0 +1,1673 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "version": 1,
+    "install": {
+      "autoconf": {
+        "pkg-path": "autoconf"
+      },
+      "automake": {
+        "pkg-path": "automake"
+      },
+      "gcc": {
+        "pkg-path": "gcc"
+      },
+      "groff": {
+        "pkg-path": "groff"
+      },
+      "libpng": {
+        "pkg-path": "libpng"
+      },
+      "libtool": {
+        "pkg-path": "libtool"
+      },
+      "libxcrypt": {
+        "pkg-path": "libxcrypt"
+      },
+      "libxml2": {
+        "pkg-path": "libxml2"
+      },
+      "pango": {
+        "pkg-path": "pango"
+      },
+      "pkgconfig": {
+        "pkg-path": "pkgconfig"
+      },
+      "setuptools": {
+        "pkg-path": "python310Packages.setuptools"
+      },
+      "xz": {
+        "pkg-path": "xz"
+      }
+    },
+    "vars": {},
+    "hook": {},
+    "profile": {},
+    "options": {
+      "systems": [
+        "aarch64-darwin",
+        "aarch64-linux",
+        "x86_64-darwin",
+        "x86_64-linux"
+      ],
+      "allow": {
+        "licenses": []
+      },
+      "semver": {}
+    },
+    "services": {},
+    "build": {
+      "rrdtool": {
+        "command": "  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make\n  make install\n"
+      }
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "autoconf",
+      "broken": false,
+      "derivation": "/nix/store/znnnr81adn91bra2jlnvxvcb3c82ld6p-autoconf-2.71.drv",
+      "description": "Part of the GNU Build System",
+      "install_id": "autoconf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "autoconf-2.71",
+      "pname": "autoconf",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.71",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/jph0qalynqv1792w2r0mb0izlmp5xygg-autoconf-2.71-doc",
+        "out": "/nix/store/q4237h2hqrl3r1p3napi0acw2070wn2n-autoconf-2.71"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "autoconf",
+      "broken": false,
+      "derivation": "/nix/store/0rzskinbw9m52ir5dj540id1r2c9iiy3-autoconf-2.71.drv",
+      "description": "Part of the GNU Build System",
+      "install_id": "autoconf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "autoconf-2.71",
+      "pname": "autoconf",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.71",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/w1id2pg04c3isiscxlliw70k2phbfalz-autoconf-2.71-doc",
+        "out": "/nix/store/kxyv19k8n9b3x8lwpnjr48g46s6fhrqh-autoconf-2.71"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "autoconf",
+      "broken": false,
+      "derivation": "/nix/store/q4hdfnvcrnv7l7xlwsw8bsnd7r0n3rfc-autoconf-2.71.drv",
+      "description": "Part of the GNU Build System",
+      "install_id": "autoconf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "autoconf-2.71",
+      "pname": "autoconf",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.71",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/nsdn6cnjraclflx2yk1529v0jcihn96a-autoconf-2.71-doc",
+        "out": "/nix/store/vdc044dy9wqbmdsbgzqgf4f2y5v4bfia-autoconf-2.71"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "autoconf",
+      "broken": false,
+      "derivation": "/nix/store/2lpk1rh7rg5ma3bdjgy2xwrkwjnibrw5-autoconf-2.71.drv",
+      "description": "Part of the GNU Build System",
+      "install_id": "autoconf",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "autoconf-2.71",
+      "pname": "autoconf",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.71",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/i1w708nwybmfkpgkky6ng0xzqli76y3c-autoconf-2.71-doc",
+        "out": "/nix/store/72mqvxwzzlffxc919aj1r6khidq78v9z-autoconf-2.71"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "automake",
+      "broken": false,
+      "derivation": "/nix/store/sh7fh56726b1j85r2yr2ccqgv94d4r40-automake-1.16.5.drv",
+      "description": "GNU standard-compliant makefile generator",
+      "install_id": "automake",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "automake-1.16.5",
+      "pname": "automake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.16.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/4fbf0n3h05zp8819pg01l8hba37zy9c0-automake-1.16.5"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "automake",
+      "broken": false,
+      "derivation": "/nix/store/3wgk1adbzhawk7rg6grmk4i2iyg8bqcs-automake-1.16.5.drv",
+      "description": "GNU standard-compliant makefile generator",
+      "install_id": "automake",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "automake-1.16.5",
+      "pname": "automake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.16.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cnzys8h0f3ng1c520px6ifqins2bh8xb-automake-1.16.5"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "automake",
+      "broken": false,
+      "derivation": "/nix/store/vnzm3d0y4kc3jscgi4mfk4jwy29nswjy-automake-1.16.5.drv",
+      "description": "GNU standard-compliant makefile generator",
+      "install_id": "automake",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "automake-1.16.5",
+      "pname": "automake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.16.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/lqsrg5jkd9askc4x96l1ilw23zphc15l-automake-1.16.5"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "automake",
+      "broken": false,
+      "derivation": "/nix/store/zi2ncrh3kkk7jxvqyz2kjnxw2f98mzrj-automake-1.16.5.drv",
+      "description": "GNU standard-compliant makefile generator",
+      "install_id": "automake",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "automake-1.16.5",
+      "pname": "automake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.16.5",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/1xrphjy9a9cwra3f1zdl9blybrqfik8s-automake-1.16.5"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gcc",
+      "broken": false,
+      "derivation": "/nix/store/hx3g5spwm6jsp6k2z4qc4z3dpf9fsxm4-gcc-wrapper-12.3.0.drv",
+      "description": "GNU Compiler Collection, version 12.3.0 (wrapper script)",
+      "install_id": "gcc",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gcc-wrapper-12.3.0",
+      "pname": "gcc",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "wrapper-12.3.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "info": "/nix/store/gsydj2q656qr55xxyc1mqw2349hv5fyl-gcc-wrapper-12.3.0-info",
+        "man": "/nix/store/5bgkpqfmq9d0d803m437aziyh5pwnpnq-gcc-wrapper-12.3.0-man",
+        "out": "/nix/store/b4d05hald4b029pyj0aj9fdl9yx6i595-gcc-wrapper-12.3.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gcc",
+      "broken": false,
+      "derivation": "/nix/store/adn6ymgl63q0z4px640fpz92alrd471l-gcc-wrapper-12.3.0.drv",
+      "description": "GNU Compiler Collection, version 12.3.0 (wrapper script)",
+      "install_id": "gcc",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gcc-wrapper-12.3.0",
+      "pname": "gcc",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "wrapper-12.3.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "info": "/nix/store/0245im65g43axfdj3vqr56fjsl2kdqg4-gcc-wrapper-12.3.0-info",
+        "man": "/nix/store/07jkqxhrymzca0lsxsb97bi38lrf4kbv-gcc-wrapper-12.3.0-man",
+        "out": "/nix/store/69m0gmj2mniv3ysz5m6iwqh1y3gc2js0-gcc-wrapper-12.3.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gcc",
+      "broken": false,
+      "derivation": "/nix/store/5br1xgq8fjzra89p3s1ibkxkjrjjjzcm-gcc-wrapper-12.3.0.drv",
+      "description": "GNU Compiler Collection, version 12.3.0 (wrapper script)",
+      "install_id": "gcc",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gcc-wrapper-12.3.0",
+      "pname": "gcc",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "wrapper-12.3.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "info": "/nix/store/3ycsgaanbrdg2ipba9fn0cjb5884aw66-gcc-wrapper-12.3.0-info",
+        "man": "/nix/store/13xvbdbys26l3cm11fr4avyshxm4mmvk-gcc-wrapper-12.3.0-man",
+        "out": "/nix/store/cm9j2pv7s3mxgff06vbcbll8air4wap8-gcc-wrapper-12.3.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gcc",
+      "broken": false,
+      "derivation": "/nix/store/w3f8imf2csiwc7jfinmgf682rvhg7fna-gcc-wrapper-12.3.0.drv",
+      "description": "GNU Compiler Collection, version 12.3.0 (wrapper script)",
+      "install_id": "gcc",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gcc-wrapper-12.3.0",
+      "pname": "gcc",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "wrapper-12.3.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "info": "/nix/store/mg53mz2nl8hwb7z5qksjbijh4cxz9knc-gcc-wrapper-12.3.0-info",
+        "man": "/nix/store/inl8ml6h7vh28k3vffi42v9zyi5rlhlk-gcc-wrapper-12.3.0-man",
+        "out": "/nix/store/n847wr4vj9f3nszbgnqz9n8w3vnnfmcd-gcc-wrapper-12.3.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "groff",
+      "broken": false,
+      "derivation": "/nix/store/hr0943sm5gfmxyis5zzmnx6zg40lmjz3-groff-1.23.0.drv",
+      "description": "GNU Troff, a typesetting package that reads plain text and produces formatted output",
+      "install_id": "groff",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "groff-1.23.0",
+      "pname": "groff",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.23.0",
+      "outputs_to_install": [
+        "out",
+        "perl"
+      ],
+      "outputs": {
+        "doc": "/nix/store/zifm8ll7bin26i4il3flijlqpx0vnlh7-groff-1.23.0-doc",
+        "info": "/nix/store/arj3g11dgg1nv2v5nbd5iz90wlvyydbj-groff-1.23.0-info",
+        "man": "/nix/store/x4r9lxmdfr1fabsaacprm7s00dsi5d95-groff-1.23.0-man",
+        "out": "/nix/store/8cxhlv7slzg2g9y973z4642nq799scz7-groff-1.23.0",
+        "perl": "/nix/store/cmgyrs85fisdin87drs00xwn92qd7qxx-groff-1.23.0-perl"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "groff",
+      "broken": false,
+      "derivation": "/nix/store/nvz6gmzzwfhx040zcz740bq8rgygji90-groff-1.23.0.drv",
+      "description": "GNU Troff, a typesetting package that reads plain text and produces formatted output",
+      "install_id": "groff",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "groff-1.23.0",
+      "pname": "groff",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.23.0",
+      "outputs_to_install": [
+        "out",
+        "perl"
+      ],
+      "outputs": {
+        "doc": "/nix/store/3pw6ggqkkgfgr435x2xa7abmc76xlcfh-groff-1.23.0-doc",
+        "info": "/nix/store/5a0ijav1mdhw0avzl1mja2v17rd3r0r2-groff-1.23.0-info",
+        "man": "/nix/store/j52gd71sz14125g8ncirhcb1g8fc5hhm-groff-1.23.0-man",
+        "out": "/nix/store/bas8rq38rdzanzdvazcjv06zlyap40w9-groff-1.23.0",
+        "perl": "/nix/store/lla9zrx8qi2za1h2r4rnfbchrs37npq9-groff-1.23.0-perl"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "groff",
+      "broken": false,
+      "derivation": "/nix/store/csr2ib7d9966dq63q65lxrc99m0f1l38-groff-1.23.0.drv",
+      "description": "GNU Troff, a typesetting package that reads plain text and produces formatted output",
+      "install_id": "groff",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "groff-1.23.0",
+      "pname": "groff",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.23.0",
+      "outputs_to_install": [
+        "out",
+        "perl"
+      ],
+      "outputs": {
+        "doc": "/nix/store/xym8yc3gghiks78qciq0pz0z10h574mf-groff-1.23.0-doc",
+        "info": "/nix/store/imhnvyk38qhpxsmrzz4ggqvwyk3vwfpg-groff-1.23.0-info",
+        "man": "/nix/store/fjxgcgxg3063zkbanfihc3nzrjd9zpg1-groff-1.23.0-man",
+        "out": "/nix/store/5wrzqpdchhm80jpqhgnq5s5f73ccgqvg-groff-1.23.0",
+        "perl": "/nix/store/227amnap6sj1h2603prm7qkzfqz1ld34-groff-1.23.0-perl"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "groff",
+      "broken": false,
+      "derivation": "/nix/store/9x36gwgi0dxv950pl6dvbak3w5vzhyy4-groff-1.23.0.drv",
+      "description": "GNU Troff, a typesetting package that reads plain text and produces formatted output",
+      "install_id": "groff",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "groff-1.23.0",
+      "pname": "groff",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.23.0",
+      "outputs_to_install": [
+        "out",
+        "perl"
+      ],
+      "outputs": {
+        "doc": "/nix/store/f1f5qykgipn1carzk0j4fgf94j9az8g6-groff-1.23.0-doc",
+        "info": "/nix/store/7dkj5w7g2nmvrmckm8lyvjimq0g12kin-groff-1.23.0-info",
+        "man": "/nix/store/6bllijgbfr6qjqs4x8lbn3qnzcz3n1b6-groff-1.23.0-man",
+        "out": "/nix/store/lqy1c7053fv7ji3mbv6dk0ai7jzh96bm-groff-1.23.0",
+        "perl": "/nix/store/wziixa3c0cqr6a9v7c79231wpwbxiw65-groff-1.23.0-perl"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libpng",
+      "broken": false,
+      "derivation": "/nix/store/ksv04f4533cnxxd007yw3zdxw4rnwfvq-libpng-apng-1.6.39.drv",
+      "description": "The official reference implementation for the PNG file format with animation patch",
+      "install_id": "libpng",
+      "license": "libpng-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libpng-apng-1.6.39",
+      "pname": "libpng",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "apng-1.6.39",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "dev": "/nix/store/ndpyccva25ay23h0jyykbm1k6h11c1bm-libpng-apng-1.6.39-dev",
+        "man": "/nix/store/wml7sg9z3cc2rznzppsrskigvzwlznz3-libpng-apng-1.6.39-man",
+        "out": "/nix/store/k2vvc5far2515kxp652jgkyrj2m59hzn-libpng-apng-1.6.39"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libpng",
+      "broken": false,
+      "derivation": "/nix/store/qmbgfr8ywaj98g2brdnz3avsiaq84h20-libpng-apng-1.6.39.drv",
+      "description": "The official reference implementation for the PNG file format with animation patch",
+      "install_id": "libpng",
+      "license": "libpng-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libpng-apng-1.6.39",
+      "pname": "libpng",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "apng-1.6.39",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "dev": "/nix/store/as74cnncljlrlri8q88miqz4r0mjdxbf-libpng-apng-1.6.39-dev",
+        "man": "/nix/store/qfzfa1s677babwrzyy6m5djjf89jx5s1-libpng-apng-1.6.39-man",
+        "out": "/nix/store/8znqhxp7crnqgdh7mccni68sb1qy3h66-libpng-apng-1.6.39"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libpng",
+      "broken": false,
+      "derivation": "/nix/store/i8rjzfjfy3mr55kx4hg3q0ixh4jyq13i-libpng-apng-1.6.39.drv",
+      "description": "The official reference implementation for the PNG file format with animation patch",
+      "install_id": "libpng",
+      "license": "libpng-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libpng-apng-1.6.39",
+      "pname": "libpng",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "apng-1.6.39",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "dev": "/nix/store/1rr3h348h373xlp4xzq131ad4d35n0wj-libpng-apng-1.6.39-dev",
+        "man": "/nix/store/rjb3pq4xgpvzsg6q3xfqjd8rdncirdfb-libpng-apng-1.6.39-man",
+        "out": "/nix/store/fdr6nnxf7hlprl1xib1ag479psng6ccn-libpng-apng-1.6.39"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libpng",
+      "broken": false,
+      "derivation": "/nix/store/mbq5mvkxmh87pjycv04bfx3w7gsj98yz-libpng-apng-1.6.39.drv",
+      "description": "The official reference implementation for the PNG file format with animation patch",
+      "install_id": "libpng",
+      "license": "libpng-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libpng-apng-1.6.39",
+      "pname": "libpng",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "apng-1.6.39",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "dev": "/nix/store/jk463glkw1rl4j75vqjzcfsahxzfrrm6-libpng-apng-1.6.39-dev",
+        "man": "/nix/store/1rbq6ip41wn6l0yhs68a2g0i0y5863nr-libpng-apng-1.6.39-man",
+        "out": "/nix/store/zpjgdq7yzwnivxp14k3cncdlp7yfcgp3-libpng-apng-1.6.39"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libtool",
+      "broken": false,
+      "derivation": "/nix/store/18vc50gqyk6ha7m3kkmcnbkzwz9pd2j6-libtool-2.4.7.drv",
+      "description": "GNU Libtool, a generic library support script",
+      "install_id": "libtool",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libtool-2.4.7",
+      "pname": "libtool",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "lib": "/nix/store/469fj1cisgpa44m2m1fbkd68xgy042nq-libtool-2.4.7-lib",
+        "out": "/nix/store/4gg8i59lnzwdqznvmppxvhkn2wh2f949-libtool-2.4.7"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libtool",
+      "broken": false,
+      "derivation": "/nix/store/8vs78m72xcfhi5n3fhjjinfzx4dmakwa-libtool-2.4.7.drv",
+      "description": "GNU Libtool, a generic library support script",
+      "install_id": "libtool",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libtool-2.4.7",
+      "pname": "libtool",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "lib": "/nix/store/wri29iijb10x444ws8rjvr1n3v9qv5ys-libtool-2.4.7-lib",
+        "out": "/nix/store/wrv9h3wvi6r2lpimrqv604ji8v7w02pn-libtool-2.4.7"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libtool",
+      "broken": false,
+      "derivation": "/nix/store/xq66h68yidhi2107by4hcn8s3cjjxyds-libtool-2.4.7.drv",
+      "description": "GNU Libtool, a generic library support script",
+      "install_id": "libtool",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libtool-2.4.7",
+      "pname": "libtool",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "lib": "/nix/store/vfr9fynwac2y9d2bhg6cy0gjrl7awzx3-libtool-2.4.7-lib",
+        "out": "/nix/store/r83hnmwjh5pj4jvf56hax9ss273np5g0-libtool-2.4.7"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libtool",
+      "broken": false,
+      "derivation": "/nix/store/k4h0lys8pv41m7f0zifp1z33wanssgmh-libtool-2.4.7.drv",
+      "description": "GNU Libtool, a generic library support script",
+      "install_id": "libtool",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libtool-2.4.7",
+      "pname": "libtool",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "lib": "/nix/store/h1vrzysb5088037kljlhy72riagcpha7-libtool-2.4.7-lib",
+        "out": "/nix/store/53qmrcqijp2nbpiymg4laii0hmiy0wpy-libtool-2.4.7"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxcrypt",
+      "broken": false,
+      "derivation": "/nix/store/afhdj65vxckzwh2y6glgm8dr013d8739-libxcrypt-4.4.36.drv",
+      "description": "Extended crypt library for descrypt, md5crypt, bcrypt, and others",
+      "install_id": "libxcrypt",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxcrypt-4.4.36",
+      "pname": "libxcrypt",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.36",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "man": "/nix/store/i844ddi5fjjqmzwiw17l15vp4x0q0yyi-libxcrypt-4.4.36-man",
+        "out": "/nix/store/db2qqynnfmd7264avk2i29l2yc2w43yp-libxcrypt-4.4.36"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxcrypt",
+      "broken": false,
+      "derivation": "/nix/store/8vs7y6npzdmxjhs28w170d47x54pxy7c-libxcrypt-4.4.36.drv",
+      "description": "Extended crypt library for descrypt, md5crypt, bcrypt, and others",
+      "install_id": "libxcrypt",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxcrypt-4.4.36",
+      "pname": "libxcrypt",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.36",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "man": "/nix/store/vdqq6yylz0377hv9sfjf2xxqp4vs8i28-libxcrypt-4.4.36-man",
+        "out": "/nix/store/i886g12blyyjyr8cbhl1iq7azw0hlxwp-libxcrypt-4.4.36"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxcrypt",
+      "broken": false,
+      "derivation": "/nix/store/48bm02f9v0ln9bv2drghjl8wm70hqz5m-libxcrypt-4.4.36.drv",
+      "description": "Extended crypt library for descrypt, md5crypt, bcrypt, and others",
+      "install_id": "libxcrypt",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxcrypt-4.4.36",
+      "pname": "libxcrypt",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.36",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "man": "/nix/store/6djck2ksq7v4i0djfjnw1a3krq3mkamx-libxcrypt-4.4.36-man",
+        "out": "/nix/store/q3pz21h237aa6azgjg843ldlj26pamy6-libxcrypt-4.4.36"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxcrypt",
+      "broken": false,
+      "derivation": "/nix/store/cc06aqhkzq2srzpda2cmfaqvf620hkdb-libxcrypt-4.4.36.drv",
+      "description": "Extended crypt library for descrypt, md5crypt, bcrypt, and others",
+      "install_id": "libxcrypt",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxcrypt-4.4.36",
+      "pname": "libxcrypt",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.36",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "man": "/nix/store/dwhdl2a32dxyyhsadzfxzbjgb553b6cn-libxcrypt-4.4.36-man",
+        "out": "/nix/store/6683g7wm2yd44vybf580xfxxh09vjp9b-libxcrypt-4.4.36"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxml2",
+      "broken": false,
+      "derivation": "/nix/store/5w5xay1ndr3xc1j6naxcsvgjggz0xnqk-libxml2-2.11.4.drv",
+      "description": "XML parsing library for C",
+      "install_id": "libxml2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxml2-2.11.4",
+      "pname": "libxml2",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.11.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/vmh4yhk7jq6i9yn4mmpcfr5n2sfa1vpn-libxml2-2.11.4-bin",
+        "dev": "/nix/store/nbgsi82rvrdk2vx86jyfkiks6lvlbip3-libxml2-2.11.4-dev",
+        "doc": "/nix/store/c2scvaw3v45bb9fdk7x2arm6v4a8g8ld-libxml2-2.11.4-doc",
+        "out": "/nix/store/5i3h83nl30aw044h6lyb36asbbd6wj6d-libxml2-2.11.4"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxml2",
+      "broken": false,
+      "derivation": "/nix/store/y8mhzw68mfw3v37sgf095big22dakl3m-libxml2-2.11.4.drv",
+      "description": "XML parsing library for C",
+      "install_id": "libxml2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxml2-2.11.4",
+      "pname": "libxml2",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.11.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/0d65v4ic37svvvsmv641dfixmhf19i65-libxml2-2.11.4-bin",
+        "dev": "/nix/store/7j0hpiv0k2v2daav36hc25hk29sya6vk-libxml2-2.11.4-dev",
+        "doc": "/nix/store/3m38nhfk9h3kzlfzh3l6sb2092n7zdfg-libxml2-2.11.4-doc",
+        "out": "/nix/store/x0awqbifw8a07q0rjjw8hxacqzqrl977-libxml2-2.11.4",
+        "py": "/nix/store/8i479n0prkzyw874qzfcx7mhrsymvsid-libxml2-2.11.4-py"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxml2",
+      "broken": false,
+      "derivation": "/nix/store/mwvd4dgzfwwb4vdqwavmq2x1vivnhqp2-libxml2-2.11.4.drv",
+      "description": "XML parsing library for C",
+      "install_id": "libxml2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxml2-2.11.4",
+      "pname": "libxml2",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.11.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/ar0qsmzfr22ms1fajz7ijhmw8l4wa674-libxml2-2.11.4-bin",
+        "dev": "/nix/store/l4i88clmi1a11gibqcpfj3q1ayqmwd1k-libxml2-2.11.4-dev",
+        "doc": "/nix/store/lavc8cqfhm3jr8g14b9zkgb82gphi787-libxml2-2.11.4-doc",
+        "out": "/nix/store/1ivb6wa59aic02m0ym0y60q7c2sv79nm-libxml2-2.11.4"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "libxml2",
+      "broken": false,
+      "derivation": "/nix/store/4wv7gyj3ijanr15jdiiidll711jl1dvn-libxml2-2.11.4.drv",
+      "description": "XML parsing library for C",
+      "install_id": "libxml2",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "libxml2-2.11.4",
+      "pname": "libxml2",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.11.4",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/v94jj3i1d8dkazvi9gmdsa7w4w5wc74a-libxml2-2.11.4-bin",
+        "dev": "/nix/store/z3cvj175nf7b0h0cf1lkzawpzdb7b2gy-libxml2-2.11.4-dev",
+        "doc": "/nix/store/mri28qlc5qmqjw6gv0py9c7pb1laqq98-libxml2-2.11.4-doc",
+        "out": "/nix/store/q1rwa6603sqfpgrnac1pwq58p29psx13-libxml2-2.11.4",
+        "py": "/nix/store/w9az9xh3z6krdw0mhkpw7myr4wa3lm2y-libxml2-2.11.4-py"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pango",
+      "broken": false,
+      "derivation": "/nix/store/ispzipahavpjxniz91xbq2nycrz7dssm-pango-1.50.14.drv",
+      "description": "A library for laying out and rendering of text, with an emphasis on internationalization",
+      "install_id": "pango",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pango-1.50.14",
+      "pname": "pango",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.50.14",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/ffwpf560sra4alwq3v62vr26awj3998s-pango-1.50.14-bin",
+        "dev": "/nix/store/pnblhr4mldw0fxjpq9pcvrm4xapz2g4w-pango-1.50.14-dev",
+        "devdoc": "/nix/store/c41yq8kxv7qs7b6vyd6r3mhwb0f14m4v-pango-1.50.14-devdoc",
+        "out": "/nix/store/vrv45hyij58g2a7x8hpnfqdap0d4h4pn-pango-1.50.14"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pango",
+      "broken": false,
+      "derivation": "/nix/store/l1ygs8zl8y994mh6i7injg67b3hadwc7-pango-1.50.14.drv",
+      "description": "A library for laying out and rendering of text, with an emphasis on internationalization",
+      "install_id": "pango",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pango-1.50.14",
+      "pname": "pango",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.50.14",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/yhslz8mr4gb7d9can2ag4dhbyxv9gm4a-pango-1.50.14-bin",
+        "dev": "/nix/store/23lkwfl0gycp29pbc9wayxjr8xzy2n3j-pango-1.50.14-dev",
+        "devdoc": "/nix/store/033rwjpkhc4yjj2pa7m9wd760llkwzdv-pango-1.50.14-devdoc",
+        "out": "/nix/store/l30gjp4976w9cs5fykxr4j5wb7ccbkzr-pango-1.50.14"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pango",
+      "broken": false,
+      "derivation": "/nix/store/g0vbvipv2v4hkx0sjbb567qm87qpm31b-pango-1.50.14.drv",
+      "description": "A library for laying out and rendering of text, with an emphasis on internationalization",
+      "install_id": "pango",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pango-1.50.14",
+      "pname": "pango",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.50.14",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/s6szkm5fbgs2j44wxwiw02glra8ph2ak-pango-1.50.14-bin",
+        "dev": "/nix/store/mw3pcaybk4m9wciarbha4nwx8ix98kn9-pango-1.50.14-dev",
+        "devdoc": "/nix/store/d8vq7rmmxxi754wba84lsjcs097sr8l8-pango-1.50.14-devdoc",
+        "out": "/nix/store/arss2m4bvh8s3admc5gyxqk369vjxs9m-pango-1.50.14"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pango",
+      "broken": false,
+      "derivation": "/nix/store/am7lsysifx0pxc9i85hflsb353nzfvxm-pango-1.50.14.drv",
+      "description": "A library for laying out and rendering of text, with an emphasis on internationalization",
+      "install_id": "pango",
+      "license": "LGPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pango-1.50.14",
+      "pname": "pango",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.50.14",
+      "outputs_to_install": [
+        "bin"
+      ],
+      "outputs": {
+        "bin": "/nix/store/jh7q3aszz9flz9na482j4a8llqdgb20i-pango-1.50.14-bin",
+        "dev": "/nix/store/y06n8j9drm0rnfsxa9d8wc4jfg08azsr-pango-1.50.14-dev",
+        "devdoc": "/nix/store/fz8q9lpfbn0q90l2dvpih2l7cr81flwi-pango-1.50.14-devdoc",
+        "out": "/nix/store/2l5r3b25837ad3fahqwdsmj5lqd7lh09-pango-1.50.14"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconfig",
+      "broken": false,
+      "derivation": "/nix/store/g6dhiynggbq6lyqi3lhfy1mcb28v8kz2-pkg-config-wrapper-0.29.2.drv",
+      "description": "A tool that allows packages to find out information about other packages (wrapper script)",
+      "install_id": "pkgconfig",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pkg-config-wrapper-0.29.2",
+      "pname": "pkgconfig",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "pkg-config-wrapper-0.29.2",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "doc": "/nix/store/vbdl9i6ll4mzlazh9wl01bf5gn1png53-pkg-config-wrapper-0.29.2-doc",
+        "man": "/nix/store/wn6425cfnd5pxr0pkcnsgb48lqgmn8wn-pkg-config-wrapper-0.29.2-man",
+        "out": "/nix/store/cjbwsjmj9wgmybk0g5i7wvbw3gr1i9sh-pkg-config-wrapper-0.29.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconfig",
+      "broken": false,
+      "derivation": "/nix/store/ihxk2w0wyayirmcih5krvpgyrrj3kgi9-pkg-config-wrapper-0.29.2.drv",
+      "description": "A tool that allows packages to find out information about other packages (wrapper script)",
+      "install_id": "pkgconfig",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pkg-config-wrapper-0.29.2",
+      "pname": "pkgconfig",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "pkg-config-wrapper-0.29.2",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "doc": "/nix/store/w2g961mdqd6dqfk0b8wlpskjdyrvrxgb-pkg-config-wrapper-0.29.2-doc",
+        "man": "/nix/store/fjqfs9nv3nhdvhd9d42z2mr8iksnd55x-pkg-config-wrapper-0.29.2-man",
+        "out": "/nix/store/n6g98whcfq8jih8rcwsrzfdcvapvliqj-pkg-config-wrapper-0.29.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconfig",
+      "broken": false,
+      "derivation": "/nix/store/dz8pw15izlxrfa5cv79r1x86792pyq5r-pkg-config-wrapper-0.29.2.drv",
+      "description": "A tool that allows packages to find out information about other packages (wrapper script)",
+      "install_id": "pkgconfig",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pkg-config-wrapper-0.29.2",
+      "pname": "pkgconfig",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "pkg-config-wrapper-0.29.2",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "doc": "/nix/store/plwzqdknww8cygg4rdwf39pdsw79zs1h-pkg-config-wrapper-0.29.2-doc",
+        "man": "/nix/store/my8mcazxdgh1b0prgawsw26n4b9zabx5-pkg-config-wrapper-0.29.2-man",
+        "out": "/nix/store/2ydmcg69lhl9lxblm79y5616s1fvln7p-pkg-config-wrapper-0.29.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconfig",
+      "broken": false,
+      "derivation": "/nix/store/rik5kls0wpmvnf5yvzswiav80fv74nh4-pkg-config-wrapper-0.29.2.drv",
+      "description": "A tool that allows packages to find out information about other packages (wrapper script)",
+      "install_id": "pkgconfig",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "pkg-config-wrapper-0.29.2",
+      "pname": "pkgconfig",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "pkg-config-wrapper-0.29.2",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "doc": "/nix/store/2a6kfasslhyahysl2r1rljdgv3zxls9s-pkg-config-wrapper-0.29.2-doc",
+        "man": "/nix/store/cxs0bnzvpz5y5v6816f4wy1ila3vgpr0-pkg-config-wrapper-0.29.2-man",
+        "out": "/nix/store/bhn19xy6sva5vf6nzz5szljdyyvlnrib-pkg-config-wrapper-0.29.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python310Packages.setuptools",
+      "broken": false,
+      "derivation": "/nix/store/3r3jczqkcf96avj04aw5dr1pazbbl2vy-python3.10-setuptools-67.4.0.drv",
+      "description": "Utilities to facilitate the installation of Python packages",
+      "install_id": "setuptools",
+      "license": "[ MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "python3.10-setuptools-67.4.0",
+      "pname": "setuptools",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3.10-setuptools-67.4.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/bp6519yfdrhm5wsasxpmz687gkflggqg-python3.10-setuptools-67.4.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python310Packages.setuptools",
+      "broken": false,
+      "derivation": "/nix/store/ir6n3cr92f0c15js5xk2lqi4y737lxhn-python3.10-setuptools-67.4.0.drv",
+      "description": "Utilities to facilitate the installation of Python packages",
+      "install_id": "setuptools",
+      "license": "[ MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "python3.10-setuptools-67.4.0",
+      "pname": "setuptools",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3.10-setuptools-67.4.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/in3z61fhh6a615xs6i6px99lf1y2zmv1-python3.10-setuptools-67.4.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python310Packages.setuptools",
+      "broken": false,
+      "derivation": "/nix/store/2a4k44i7llhi4pvs48d9zd2bmjcdgwbb-python3.10-setuptools-67.4.0.drv",
+      "description": "Utilities to facilitate the installation of Python packages",
+      "install_id": "setuptools",
+      "license": "[ MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "python3.10-setuptools-67.4.0",
+      "pname": "setuptools",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3.10-setuptools-67.4.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/6cz1wxcn4pb6vviqik249ydswbpvlc5c-python3.10-setuptools-67.4.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python310Packages.setuptools",
+      "broken": false,
+      "derivation": "/nix/store/s3z5pvhfnp8rw2fdfwvrnhzdn7v5fyyy-python3.10-setuptools-67.4.0.drv",
+      "description": "Utilities to facilitate the installation of Python packages",
+      "install_id": "setuptools",
+      "license": "[ MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "python3.10-setuptools-67.4.0",
+      "pname": "setuptools",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3.10-setuptools-67.4.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/fhy4qq6d1xkcxybf0q63b0ryszxj74sm-python3.10-setuptools-67.4.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/771kwjx3zvf5bbcyxfr40hk0s07mlmd0-xz-5.4.4.drv",
+      "description": "A general-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "xz-5.4.4",
+      "pname": "xz",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.4.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/7zsf295d6x0krvwz8cjk8as5087jp4ly-xz-5.4.4-bin",
+        "dev": "/nix/store/60jxbdwr15znkaldija4hn933pnmgb8c-xz-5.4.4-dev",
+        "doc": "/nix/store/9lgrhiyh6c8ac5lj32w7lld875m8vhyq-xz-5.4.4-doc",
+        "man": "/nix/store/j3yw9pp253xwwxd6d6li4znx049bmysm-xz-5.4.4-man",
+        "out": "/nix/store/6bd4i7ds7kb46d8iiznbm36f8iy08vhq-xz-5.4.4"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/r4afk79jqv1fvx6cm7mzcyc5x180iv44-xz-5.4.4.drv",
+      "description": "A general-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "xz-5.4.4",
+      "pname": "xz",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.4.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/m5yqcs508r40613yz99w20qdispswwj6-xz-5.4.4-bin",
+        "dev": "/nix/store/mj1risldnrsh3hxbhdi4yl9b9d8fmh86-xz-5.4.4-dev",
+        "doc": "/nix/store/kd2hb9czr6s6bbxz4iivrgrai5gak5w6-xz-5.4.4-doc",
+        "man": "/nix/store/qzrwpxkpgfdx5yiv2pgm5khl88x2czwz-xz-5.4.4-man",
+        "out": "/nix/store/158kfi97wsmf4xndhyyrqwbybpy0cs68-xz-5.4.4"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/59f45w1wlmb5bwanq1hd78wpqzywllw5-xz-5.4.4.drv",
+      "description": "A general-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "xz-5.4.4",
+      "pname": "xz",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.4.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/al7asc7dzp5axdyd5mmf15ywvhxqbrj9-xz-5.4.4-bin",
+        "dev": "/nix/store/lcxn36yz9aajnn5d8ppd6mvmyzn4vjpk-xz-5.4.4-dev",
+        "doc": "/nix/store/i40y4znd3frd459917zmbgscq12mnbxs-xz-5.4.4-doc",
+        "man": "/nix/store/k22vljg0ri5sycx4318qfxk36f3cfhmv-xz-5.4.4-man",
+        "out": "/nix/store/l0bhkbl6zh71cdbibk3bmqywl8h9qa4l-xz-5.4.4"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/b5bq5vn0nkx4rzdsrr6dhi5q52wy5zmj-xz-5.4.4.drv",
+      "description": "A general-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "xz-5.4.4",
+      "pname": "xz",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.4.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/18d4fyncddy5sscnffvgzdr109fs3jvn-xz-5.4.4-bin",
+        "dev": "/nix/store/rzvscdk4cyg1g0l9h4a7fscsv4jhxs1n-xz-5.4.4-dev",
+        "doc": "/nix/store/v9crw3505l0v6npd2rxp0m9bg5l1cn09-xz-5.4.4-doc",
+        "man": "/nix/store/ph3xhhf0cx8vmk1x38nhipan86jx7vwi-xz-5.4.4-man",
+        "out": "/nix/store/6ya322rs3w8590ln81na4r89yw4v6fan-xz-5.4.4"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}
