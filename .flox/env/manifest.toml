@@ -75,6 +75,6 @@ rrdtool.command = '''
   }
   ./configure --prefix=$out
   make clean
-  make
+  make -j 4
   make install
 '''

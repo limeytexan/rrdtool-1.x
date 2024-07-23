@@ -58,7 +58,7 @@
     "services": {},
     "build": {
       "rrdtool": {
-        "command": "  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make\n  make install\n"
+        "command": "  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make -j 4\n  make install\n"
       }
     }
   },
