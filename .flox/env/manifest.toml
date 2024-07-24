@@ -20,6 +20,7 @@ pkgconfig.pkg-path = "pkgconfig"
 setuptools.pkg-path = "python310Packages.setuptools"
 xz.pkg-path = "xz"
 automake.pkg-path = "automake"
+gnumake.pkg-path = "gnumake"
 # hello.pkg-path = "hello"
 # nodejs = { version = "^18.4.2", pkg-path = "nodejs_18" }
 
@@ -65,6 +66,8 @@ systems = ["aarch64-darwin", "aarch64-linux", "x86_64-darwin", "x86_64-linux"]
 [build]
 
 rrdtool.command = '''
+  # The BUILD_MODE can be one of manifest (default), impure or pure.
+  BUILD_MODE=manifest
   set -ex
   test -f ./configure || {
     # The bootstrap script assumes the use of `glibtoolize` on Darwin.

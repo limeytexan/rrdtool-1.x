@@ -12,6 +12,9 @@
       "gcc": {
         "pkg-path": "gcc"
       },
+      "gnumake": {
+        "pkg-path": "gnumake"
+      },
       "groff": {
         "pkg-path": "groff"
       },
@@ -58,7 +61,7 @@
     "services": {},
     "build": {
       "rrdtool": {
-        "command": "  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make -j 4\n  make install\n"
+        "command": "  # The BUILD_MODE can be one of manifest (default), impure or pure.\n  BUILD_MODE=manifest\n  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make -j 4\n  make install\n"
       }
     }
   },
@@ -446,6 +449,144 @@
         "info": "/nix/store/mg53mz2nl8hwb7z5qksjbijh4cxz9knc-gcc-wrapper-12.3.0-info",
         "man": "/nix/store/inl8ml6h7vh28k3vffi42v9zyi5rlhlk-gcc-wrapper-12.3.0-man",
         "out": "/nix/store/n847wr4vj9f3nszbgnqz9n8w3vnnfmcd-gcc-wrapper-12.3.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/via9vf2ha1y22qibpbyjsp1jr4myywkr-gnumake-4.4.1.drv",
+      "description": "A tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "info": "/nix/store/js5gz4sgkvfnrr7hqnzq8a12ylvd2lzf-gnumake-4.4.1-info",
+        "man": "/nix/store/hr5wgy2nsk52zddphxhsh771g3q1gwic-gnumake-4.4.1-man",
+        "out": "/nix/store/1xva7c4pqsazi7q13mhs36n1c42g9xhi-gnumake-4.4.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/qn50b8689wkz583xgba90rxwbp24x3s8-gnumake-4.4.1.drv",
+      "description": "A tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "debug": "/nix/store/ar2j6wbjq08hhdm6w5pd5i01by2ghm3v-gnumake-4.4.1-debug",
+        "info": "/nix/store/f2lvfkr0x7zpxycn676biya1a7vzi674-gnumake-4.4.1-info",
+        "man": "/nix/store/rm48vq6hjdv7mi2pnc1r3f3gqbifq2j8-gnumake-4.4.1-man",
+        "out": "/nix/store/0lb4aqrbimy94q44dbiyv3lj3m2lfqnj-gnumake-4.4.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/q9k7sxyv3806lyib3kmqgj4abspsd0j9-gnumake-4.4.1.drv",
+      "description": "A tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "info": "/nix/store/k90cakhl33q00b33bzazgfx3vjmr7qn2-gnumake-4.4.1-info",
+        "man": "/nix/store/pmpjq27nswk4dy77v3kb2yvd652p8nyg-gnumake-4.4.1-man",
+        "out": "/nix/store/ps97zbi39sdazshmi0ky6vg399zqi3yq-gnumake-4.4.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnumake",
+      "broken": false,
+      "derivation": "/nix/store/fis965lcaxlhxsibjqr7g99l074niraj-gnumake-4.4.1.drv",
+      "description": "A tool to control the generation of non-source files from sources",
+      "install_id": "gnumake",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "gnumake-4.4.1",
+      "pname": "gnumake",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.4.1",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "debug": "/nix/store/367gk3xlbcy4b1wx9vgil2blsw95gx47-gnumake-4.4.1-debug",
+        "info": "/nix/store/ibdb0wws76j73byzr23xfa8ni6ksn2cz-gnumake-4.4.1-info",
+        "man": "/nix/store/qmnnjfmk96mljslcf9ab8mddccjxqi4i-gnumake-4.4.1-man",
+        "out": "/nix/store/zlppfsak8vpv531l1dhr66ky9igar0zm-gnumake-4.4.1"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
