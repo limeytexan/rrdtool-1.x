@@ -33,6 +33,9 @@
       "pango": {
         "pkg-path": "pango"
       },
+      "perl": {
+        "pkg-path": "perl"
+      },
       "pkgconfig": {
         "pkg-path": "pkgconfig"
       },
@@ -61,7 +64,7 @@
     "services": {},
     "build": {
       "rrdtool": {
-        "command": "  # The BUILD_MODE can be one of manifest (default), impure or pure.\n  BUILD_MODE=manifest\n  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make -j 4\n  make install\n"
+        "command": "  # The BUILD_MODE can be one of manifest (default), impure or pure.\n  BUILD_MODE=pure\n  set -ex\n  test -f ./configure || {\n    # The bootstrap script assumes the use of `glibtoolize` on Darwin.\n    # Copy just the parts here that we need.\n    # ./bootstrap - DO NOT USE\n    libtoolize\n    autoreconf --force --install --verbose -I m4 --make\n  }\n  ./configure --prefix=$out\n  make clean\n  make -j 4\n  make install\n"
       }
     }
   },
@@ -1401,6 +1404,142 @@
         "dev": "/nix/store/y06n8j9drm0rnfsxa9d8wc4jfg08azsr-pango-1.50.14-dev",
         "devdoc": "/nix/store/fz8q9lpfbn0q90l2dvpih2l7cr81flwi-pango-1.50.14-devdoc",
         "out": "/nix/store/2l5r3b25837ad3fahqwdsmj5lqd7lh09-pango-1.50.14"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "perl",
+      "broken": false,
+      "derivation": "/nix/store/xhi90x2bg75a7g2695pmrkzrb06xy0i5-perl-5.38.0.drv",
+      "description": "The standard implementation of the Perl 5 programming language",
+      "install_id": "perl",
+      "license": "Artistic-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "perl-5.38.0",
+      "pname": "perl",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.38.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/hyfab8hq1hjyyinpdd8ka9j1rx87ccjk-perl-5.38.0-devdoc",
+        "man": "/nix/store/8y8ji4yqhdl96q8vvsxbqyi1w98x7ld8-perl-5.38.0-man",
+        "out": "/nix/store/w1qmxddniqiz3s48km6ldwrrxk1prnl0-perl-5.38.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "perl",
+      "broken": false,
+      "derivation": "/nix/store/7imb26x1y24gabbawbrmgy7p29n7w10n-perl-5.38.0.drv",
+      "description": "The standard implementation of the Perl 5 programming language",
+      "install_id": "perl",
+      "license": "Artistic-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "perl-5.38.0",
+      "pname": "perl",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.38.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/5b33r9la60xyb6szdp643hwq0n50m49r-perl-5.38.0-devdoc",
+        "man": "/nix/store/v6ljzkpf0wgd75phj6v1v9p4bkz8mcly-perl-5.38.0-man",
+        "out": "/nix/store/8583l4j4x80qyqycc53k477vvy1li34r-perl-5.38.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "perl",
+      "broken": false,
+      "derivation": "/nix/store/i318pyzcig50k8b545sgb67s3m1p4h5y-perl-5.38.0.drv",
+      "description": "The standard implementation of the Perl 5 programming language",
+      "install_id": "perl",
+      "license": "Artistic-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "perl-5.38.0",
+      "pname": "perl",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.38.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/hk05wjdb2rn5kbjm5q8a0ndjxfhpxdj4-perl-5.38.0-devdoc",
+        "man": "/nix/store/44rnj4gsvrdyl423y9p7wjjynamlmh55-perl-5.38.0-man",
+        "out": "/nix/store/lqlb1nm4m6zbhib13wqc7445w0d1wkl7-perl-5.38.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "perl",
+      "broken": false,
+      "derivation": "/nix/store/kpfm50yy4r21h5vm5666ll84ad3g7rj4-perl-5.38.0.drv",
+      "description": "The standard implementation of the Perl 5 programming language",
+      "install_id": "perl",
+      "license": "Artistic-1.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "name": "perl-5.38.0",
+      "pname": "perl",
+      "rev": "91a22f76cd1716f9d0149e8a5c68424bb691de15",
+      "rev_count": 517128,
+      "rev_date": "2023-08-21T17:25:11Z",
+      "scrape_date": "2024-06-13T20:30:59Z",
+      "stabilities": [
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.38.0",
+      "outputs_to_install": [
+        "out",
+        "man"
+      ],
+      "outputs": {
+        "devdoc": "/nix/store/9kk4c0l4xafqxq3jssallk83d5wyvkhw-perl-5.38.0-devdoc",
+        "man": "/nix/store/lvg0jgphxisrq1f9yw0r8fvas9wdlqml-perl-5.38.0-man",
+        "out": "/nix/store/9nqjvxzgwx8bx5630w918fysmyv0lcrk-perl-5.38.0"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
